@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather-App-Full-Stack-Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body onload="loadPage()">
+
+    <div class="searchBox">
+        <input type="text" placeholder="Write your city" id="city-input"><br>
+        <button id="button" onclick="handleSearch()">Search</button>
+    </div>
+    <div class="container"></div>
+
+    <script id="city-template" type="text/x-handlebars-template">
+        {{#each cities}}
+            <div class='city'>
+                <div class='temperature'>{{temperature}} °C  </div>
+                <div class='name'>{{name}}</div>
+                <div class="conditionPic"><img src="{{conditionPic}}"></div>
+                <div class='condition'><strong>{{condition}}</strong></div>
+                <div class='updatedAt'>{{updatedAt}}</div>
+                <i class="far fa-save" style="font-size:5x"></i>
+                <i class="far fa-trash-alt" style="font-size:5x"></i>
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="TempManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

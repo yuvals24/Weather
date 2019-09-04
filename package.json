@@ -1,0 +1,19 @@
+{
+  "name": "weather-app-full-stack-project",
+  "version": "1.0.0",
+  "description": "first full stack project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuval Schwartz",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.4",
+    "parser": "^0.1.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
